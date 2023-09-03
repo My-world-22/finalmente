@@ -1,0 +1,73 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    animation: overlay-img 2s ease-in-out 0s  2 alternate forwards;
+}
+
+.overlay img {
+    animation-duration: 0.5s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: calc(var(--animation-delay)*var(--li-index)*0.35);
+    animation-fill-mode: backwards;
+     width: 60vw;
+ }
+
+@keyframes overlay-img {
+    from {   
+        opacity: 0;
+        z-index: -1;
+    }
+
+    to {
+        background-color: #141414;
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+.navbar-nav img{
+    width: 50px;
+}
+.bg-dark {
+    background-color: #141414 !important;
+}
+.navbar{
+    font-size: 1.5rem;
+}
+.navbar .navbar-brand img {
+    width: 200px;
+    height: 70px;
+}
+main{
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.dropdown-item {
+    color: white!important;
+}
+.movie-card img{
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+.movie-card{
+    transition: transform 0.5 s ease-in-out;
+}
+.movie-card:hover{
+    transition: transform 0.5 s ease-in-out;
+    transform: scale(1.75);
+    z-index: 1;
+}
+ul{
+    list-style: none;
+}
